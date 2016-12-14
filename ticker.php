@@ -40,9 +40,9 @@ class Ticker {
 		return ($currentLoop+1)/$this->loopTotal;
 	}
 	function getLoopRelativeVerbose($currentLoop, $decimals = 2, $dec_point = '.'){
-		return number_format(100*$this->getLoopRelative($currentLoop), $decimals, $dec_point, '');
+		return number_format(100*$this->getLoopRelative($currentLoop), $decimals, $dec_point, '').'%';
 	}
-	function estimatedTimeToLastLoopInMinutesVerbose($currentLoop, $decimals = 2, $dec_point = '.'){
+	function getEstimatedTimeToLastLoopInMinutesVerbose($currentLoop, $decimals = 2, $dec_point = '.'){
 		return number_format(((1/$this->getLoopRelative($currentLoop) - 1)*$this->diffTick())/60,
 			$decimals, $dec_point, '');
 	}
