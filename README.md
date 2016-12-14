@@ -35,7 +35,7 @@ $ticker = new Ticker(true, 100);
 for($i = 0; $i < 100; $i++){
   //Do whatever it's needed
   echo 'Ran '.$ticker->getLoopRelativeVerbose($i).' already.';
-  echo "It'll probably take ".$ticker->getEstimatedTimeToLastLoopInMinutesVerbose($i).' minutes to end loop.';
+  echo "It'll probably take ".$ticker->getEstimatedTimeToLastLoopInMinutesVerbose($i).' minutes to end loops.';
 }
 $ticker->echoTick("In total took ");
 $ticker->echoMemory("In total used ");
