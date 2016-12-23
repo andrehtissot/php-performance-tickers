@@ -5,14 +5,14 @@ Little PHP classes to test performace.
 Useful to test how code performs.
 
 ####Can be used like:
-```
+```php
 $ticker = new SimpleTicker();
 $ticker->startTick();
 //Do whatever it's needed
 echo "Took ".$ticker->diffTick()." seconds!";
 ```
 ####Or just:
-```
+```php
 $ticker = new SimpleTicker(true);
 //Do whatever it's needed
 $ticker->echoTick("Took ");
@@ -22,7 +22,7 @@ $ticker->echoTick("Took ");
 Like SimpleTicker, but extended to handle memory and track progress within loops nicely.
 
 ####Simple use for time and memory:
-```
+```php
 $ticker = new Ticker(true);
 //Do whatever it's needed
 $ticker->echoTick("Took ");
@@ -30,7 +30,7 @@ $ticker->echoMemory("Used ");
 ```
 
 ####Within loops
-```
+```php
 $ticker = new Ticker(true, 100);
 for($i = 0; $i < 100; $i++){
   //Do whatever it's needed
@@ -46,7 +46,7 @@ Like Ticker, but specialized to work within loops.
 Because some problems somethings only show up at the nth loop.
 
 ####Test how long a piece of code performs inside loops, stopping at the 20th loop:
-```
+```php
 $ticker = new AccumulatingTicker(20);
 for($i = 0; $i < 100; $i++){
   //Uninteresting code
